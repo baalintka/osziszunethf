@@ -16,7 +16,9 @@ def feladat2(szam):
     print(egyesek,tizesek,szazasok,ezresek)
 
 
-
+'''Írj eljárást, mely paraméterében kap egy számot, majd összeadja a számjegyeket és kiírja a számjegyek összegét a képernyőre. 
+PL. 324 -> „324 számjegyeinek összege: 9”
+'''
 def feladat3(szam):
     ujszam:int=0
     osszeg:int=0
@@ -27,3 +29,39 @@ def feladat3(szam):
         szam//=10
 
     print("számjegyek összege: "+str(osszeg))
+
+'''irj programot, ami kiírja a 10x10-es alapú szorzótáblát! 10-esével egymás alá! használj hozzá formázott kiiratást!”
+'''
+def feladat4():
+
+    i:int=1
+    v:int=1
+    while v != 11:
+        while  i!=10:
+            print(i*v,end="  ")
+            i+=1
+        i=1
+        print("")
+        v+=1
+
+def feladat5():
+    szoveg:str=input("Kérem adja meg melyik szektort szeretné megnézni")
+    while szoveg.isnumeric():
+        szoveg=input("Kérem adja meg melyik szektort szeretné megnézni")
+
+    if szoveg =="A".lower():
+        print("Nemzetközi Csarnok, World Conservation Forum 2021")
+    elif (szoveg =="B".lower()) or (szoveg =="E".lower()):
+        print("Kereskedelmi csarnok")
+    elif szoveg =="C".lower():
+        print("Konferencia-központ Innovációs Showroom")
+    elif szoveg =="D".lower():
+        print("Hal, Víz és Ember")
+    elif szoveg =="F".lower():
+        print("Hagyományos Vadászati Módok Csarnoka")
+    elif szoveg =="G".lower():
+        print("Hazai és nemzetközi Trófeakiállítás, 12. Nyílt Európai Taxiderma-bajnokság, Vadászat 21.században kiállítás")
+    elif szoveg =="H".lower():
+        print("Központi Magyar Kiállítás")
+    else:
+        print("Forduljon a pénztárhoz")
