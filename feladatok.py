@@ -28,7 +28,7 @@ def feladat3(szam):
 
         szam//=10
 
-    print("számjegyek összege: "+str(osszeg))
+    print("számjegyeinek összege: "+str(osszeg))
 
 '''irj programot, ami kiírja a 10x10-es alapú szorzótáblát! 10-esével egymás alá! használj hozzá formázott kiiratást!”
 '''
@@ -37,13 +37,23 @@ def feladat4():
     i:int=1
     v:int=1
     while v != 11:
-        while  i!=10:
+        while  i!=11:
             print(i*v,end="  ")
             i+=1
         i=1
         print("")
         v+=1
-
+'''1.feladat:	Egy a természettel  Vadászati és Természeti Világkiállításon téged bíztak meg, hogy egy kihelyezett információs tábla részműködését leprogramozd!
+A felhasználónak be kell gépelnie melyik szektort szeretné megnézni, a te programod pedig kiírja az ott található kiállítás nevét.
+•	A esetén Nemzetközi Csarnok, World Conservation Forum 2021
+•	B és E esetén a Kereskedelmi Csarnok felirat jelenjen meg
+•	C esetén Konferencia-központ Innovációs Showroom
+•	D esetén Hal, Víz és Ember
+•	F esetén Hagyományos Vadászati Módok Csarnoka
+•	G Hazai és nemzetközi Trófeakiállítás, 12. Nyílt Európai Taxiderma-bajnokság, Vadászat 21.században kiállítás
+•	H esetben Központi Magyar Kiállítás
+•	Minden egyéb nem szám adatra írja ki, hogy forduljon a pénztárhoz.
+'''
 def feladat5():
     szoveg:str=input("Kérem adja meg melyik szektort szeretné megnézni")
     while szoveg.isnumeric():
