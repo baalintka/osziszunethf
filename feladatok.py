@@ -106,3 +106,27 @@ def feladat7():
     print("Kerület: ",str(round(kerulet)))
     terulet:float=a*b
     print("Terület: ",str(round(terulet)))
+
+def feladat8():
+    hossz:int=0
+    leghosszabbnev:str=""
+    van:bool=False
+    szamlalo:int=0
+    nev:str=input("Adjon meg egy nevet, (befejezéshez -->@)")
+    szamlalo+=1
+    while nev != "@":
+        nev = input("Adjon meg egy nevet, (befejezéshez -->@)")
+        szamlalo += 1
+        if len(nev) > hossz:
+            hossz=len(nev)
+            leghosszabbnev=nev
+        if nev[0] == "A".lower():
+            van=True
+    if van:
+        print("Van benne 'A' kezdőbetűs név")
+    else:
+        print("Nincs benne 'A' kezdőbetűs név")
+    print(str(szamlalo - 1),"Nevet adott meg")
+    print("Leghosszabb név betűinek száma: ",str(hossz))
+    print("Leghosszabb név: ",leghosszabbnev)
+

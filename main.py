@@ -5,4 +5,5 @@ import feladatok
 #feladatok.feladat4()
 #feladatok.feladat5()
 #feladatok.feladat6()
-feladatok.feladat7()
+#feladatok.feladat7()
+feladatok.feladat8()
