@@ -1,8 +1,8 @@
 ''' 1.	Kérj be egy [200, 920] intervallumban lévő egész számot (ha nem ebben az intervallumban van, jelezz hibát!), majd írasd ki az első számjegyét!    '''
 def feladat1():
-    szam:int = int(input("Kérem ajdon meg egy egész számot"))
+    szam:int = int(input("Kérem ajdon meg egy egész számot 200 és 920 között"))
     while szam < 200 or szam > 920:
-        szam: int = int(input("Kérem ajdon meg egy egész számot"))
+        szam: int = int(input("Rossz,kérem ajdon meg egy egész számot 200 és 920 között"))
     szamosztva:int=szam/100
     print(round(szamosztva))
 '''2.	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne! használd hozzá az egész osztás operátorát - // ! 
@@ -38,8 +38,10 @@ def feladat4():
     v:int=1
     while v != 11:
         while  i!=11:
-            print(i*v,end="  ")
+
+            print(f"{i*v:>4}",end="")
             i+=1
+
         i=1
         print("")
         v+=1
