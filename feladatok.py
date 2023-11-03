@@ -1,11 +1,14 @@
-''' 1.	Kérj be egy [200, 920] intervallumban lévő egész számot (ha nem ebben az intervallumban van, jelezz hibát!), majd írasd ki az első számjegyét!    '''
+''' 	Kérj be egy [200, 920] intervallumban lévő egész számot (ha nem ebben az intervallumban van, jelezz hibát!), majd írasd ki az első számjegyét!    '''
+import math
+
+
 def feladat1():
     szam:int = int(input("Kérem ajdon meg egy egész számot 200 és 920 között"))
     while szam < 200 or szam > 920:
-        szam: int = int(input("Rossz,kérem ajdon meg egy egész számot 200 és 920 között"))
+        szam=int(input("Rossz,kérem ajdon meg egy egész számot 200 és 920 között"))
     szamosztva:int=szam/100
     print(round(szamosztva))
-'''2.	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne! használd hozzá az egész osztás operátorát - // ! 
+'''	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne! használd hozzá az egész osztás operátorát - // ! 
 pl: 123//10 =12  123%10=3
  '''
 def feladat2(szam):
@@ -77,3 +80,29 @@ def feladat5():
         print("Központi Magyar Kiállítás")
     else:
         print("Forduljon a pénztárhoz")
+
+'''6.	A program számítsa ki egy beolvasott valós szám négyzetgyökét! A program adjon hibaüzenetet, ha a felhasználó negatív számból akar gyököt vonni!'''
+def feladat6():
+
+    szam:float = float(input("Kérem adjon meg egy valós számot"))
+    while szam < 0:
+        szam = float(input("Kérem adjon meg egy valós számot"))
+    negyzetgyok: float =0
+    negyzetgyok=math.sqrt(szam)
+    print(round(szam)," Négyzetgyöke, kerekítve :",(round(negyzetgyok)))
+
+'''	A program olvasson be a konzolról két valós számot! Ha mindkét szám pozitív,
+ akkor legyenek a beolvasott számok egy téglalap oldalai. A program számítsa ki a téglalap kerületét, 
+területét, és írja ki két tizedesre kerekítve az eredményeket a konzolra! Hiba esetén írja ki: "Hiba: a téglalap oldalai nem pozitívak!"!'''
+def feladat7():
+
+    a: float = float(input("Kérem adjon meg egy valós számot"))
+    b: float = float(input("Kérem adjon meg egy valós számot"))
+    while a < 0 or b < 0:
+        print("Hiba: a téglalap oldalai nem pozitívak!")
+        a: float = float(input("Kérem adjon meg egy valós számot"))
+        b: float = float(input("Kérem adjon meg egy valós számot"))
+    kerulet:float=2*(a+b)
+    print("Kerület: ",str(round(kerulet)))
+    terulet:float=a*b
+    print("Terület: ",str(round(terulet)))
