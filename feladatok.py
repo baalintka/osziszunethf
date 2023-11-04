@@ -164,16 +164,22 @@ def feladat9():
             sorozat+=1
             print(dobas)
             i+=1
+            if i==10:
+                print(str(fbetu), ".db f-et adott meg ")
+                print("Leghosszabb  f sorozat: ", str(sorozat))
         if dobas=="i".lower():
             if sorozat > leghosszabbsorozat:
                 leghosszabbsorozat=sorozat
             sorozat=0
             print(dobas)
             i+= 1
+            if i==10:
+                print(str(fbetu), ".db f-et adott meg ")
+                print("Leghosszabb  f sorozat: ",str(leghosszabbsorozat))
 
 
-    print(str(fbetu),".db f-et adott meg ")
-    print("Leghosszabb  f sorozat: ",str(leghosszabbsorozat))
+
+
 
 
 '''Irj programot amely beolvas egy pozitív egész számot, és ,megmondja hogy tökéletes szám-e(A tökéletes számok azok, melyek osztóinak összege egyenlő a szám
