@@ -6,17 +6,24 @@ def feladat1():
     szam:int = int(input("Kérem ajdon meg egy egész számot 200 és 920 között"))
     while szam < 200 or szam > 920:
         szam=int(input("Rossz,kérem ajdon meg egy egész számot 200 és 920 között"))
-    szamosztva:int=szam/100
-    print(round(szamosztva))
+    szamosztva:float=szam/100
+    print("Első számjegy: ",int(szamosztva))
+
+
 '''	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne! használd hozzá az egész osztás operátorát - // ! 
 pl: 123//10 =12  123%10=3
  '''
 def feladat2(szam):
+
     egyesek:int=szam//1
     tizesek:int=szam//10
     szazasok:int=szam//100
-    ezresek=szam//1000
-    print(egyesek,tizesek,szazasok,ezresek)
+    ezresek:int=szam//1000
+
+
+    print(f"egyesek: {egyesek} tizesek: {tizesek} százasok: {szazasok} ezresek: {ezresek}")
+
+
 
 
 '''Írj eljárást, mely paraméterében kap egy számot, majd összeadja a számjegyeket és kiírja a számjegyek összegét a képernyőre. 
@@ -107,6 +114,12 @@ def feladat7():
     terulet:float=a*b
     print("Terület: ",str(round(terulet)))
 
+
+'''Írj metódust, mely neveket kér a felhasználótól addig amíg a „@” jelet nem kapja. 
+Hány nevet adott meg a felhasználó? 
+Van-e benne A betűvel kezdődő név? 
+Melyik a leghosszabb név? 
+'''
 def feladat8():
     hossz:int=0
     leghosszabbnev:str=""
@@ -131,6 +144,10 @@ def feladat8():
     print("Leghosszabb név: ",leghosszabbnev)
 
 
+'''	Írj metódust, mely egy érmedobás eredményét kéri be a felhasználótól 10-szer egymás után! A felhasználó minden lépésben a „f” vagy  „i” betűket kell megadjon. Addig kérd be a jeleket, amíg jó jelet nem ad meg. 
+Hányszor adott meg „f” betűt? 
+Mekkora a leghosszabb f sorozat? 
+'''
 def feladat9():
     leghosszabbsorozat:int=0
     sorozat:int=0
@@ -157,3 +174,6 @@ def feladat9():
 
     print(str(fbetu),".db f-et adott meg ")
     print("Leghosszabb  f sorozat: ",str(leghosszabbsorozat))
+
+def feladat10():
+    pass
