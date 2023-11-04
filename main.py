@@ -9,5 +9,6 @@ import feladatok
 #feladatok.feladat8()
 #feladatok.feladat9()
 #feladatok.feladat10()
-feladatok.feladat11(102,102)
+#feladatok.feladat11(102,102)
 #feladatok.feladat12(4,2)
+#feladatok.feladat13(9)

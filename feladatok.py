@@ -236,5 +236,18 @@ def feladat12(a,b):
         c:int=a*b
         print("legkisebb közös többszörös: ",c)
 
-
-
+def feladat13(szam):
+    if  szam < 0:
+        print("Hiba")
+    elif szam >= 10:
+        print("Ez már tényleg túlzás.")
+    elif szam==0:
+        print("Be se jövök!")
+    elif szam ==1:
+        print("Még 90% on vagyunk!")
+    elif szam ==2 or szam==3:
+        print("Még bírjuk (60%)")
+    elif szam ==4 or szam==5 or szam==6 or szam==7:
+        print("Progit tanulunk, töltődünk! 70%")
+    elif szam ==8 or szam==9:
+        print("Lassan nem bírjuk tovább! 50%")
