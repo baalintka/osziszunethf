@@ -1,7 +1,7 @@
-''' 	Kérj be egy [200, 920] intervallumban lévő egész számot (ha nem ebben az intervallumban van, jelezz hibát!), majd írasd ki az első számjegyét!    '''
+
 import math
 
-
+''' 	Kérj be egy [200, 920] intervallumban lévő egész számot (ha nem ebben az intervallumban van, jelezz hibát!), majd írasd ki az első számjegyét!    '''
 def feladat1():
     szam:int = int(input("Kérem ajdon meg egy egész számot 200 és 920 között"))
     while szam < 200 or szam > 920:
@@ -10,9 +10,8 @@ def feladat1():
     print("Első számjegy: ",int(szamosztva))
 
 
-'''	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne! használd hozzá az egész osztás operátorát - // ! 
-pl: 123//10 =12  123%10=3
- '''
+
+'''	Írj metódust, mely a paraméterében kapott számról megmondja, hogy hány 1-es, 10-es, 100 - as, 1000 - es, stb van benne!'''
 def feladat2(szam):
 
     egyesek:int=szam//1
@@ -40,7 +39,7 @@ def feladat3(szam):
 
     print("számjegyeinek összege: "+str(osszeg))
 
-'''irj programot, ami kiírja a 10x10-es alapú szorzótáblát! 10-esével egymás alá! használj hozzá formázott kiiratást!”
+'''irj programot, ami kiírja a 10x10-es alapú szorzótáblát! 10-esével egymás alá!”
 '''
 def feladat4():
 
@@ -55,6 +54,7 @@ def feladat4():
         i=1
         print("")
         v+=1
+
 '''1.feladat:	Egy a természettel  Vadászati és Természeti Világkiállításon téged bíztak meg, hogy egy kihelyezett információs tábla részműködését leprogramozd!
 A felhasználónak be kell gépelnie melyik szektort szeretné megnézni, a te programod pedig kiírja az ott található kiállítás nevét.
 •	A esetén Nemzetközi Csarnok, World Conservation Forum 2021
@@ -93,7 +93,7 @@ def feladat6():
 
     szam:float = float(input("Kérem adjon meg egy valós számot"))
     while szam < 0:
-        szam = float(input("Kérem adjon meg egy valós számot"))
+        szam = float(input("Hiba! Kérem adjon meg egy valós számot"))
     negyzetgyok: float =0
     negyzetgyok=math.sqrt(szam)
     print(round(szam)," Négyzetgyöke, kerekítve :",(round(negyzetgyok)))
@@ -127,6 +127,11 @@ def feladat8():
     szamlalo:int=0
     nev:str=input("Adjon meg egy nevet, (befejezéshez -->@)")
     szamlalo+=1
+    if len(nev) > hossz:
+        hossz = len(nev)
+        leghosszabbnev = nev
+    if nev[0] == "A".lower():
+        van = True
     while nev != "@":
         nev = input("Adjon meg egy nevet, (befejezéshez -->@)")
         szamlalo += 1
@@ -162,7 +167,6 @@ def feladat9():
         if dobas=="f".lower():
             fbetu+=1
             sorozat+=1
-            print(dobas)
             i+=1
             if i==10:
                 print(str(fbetu), ".db f-et adott meg ")
@@ -171,7 +175,6 @@ def feladat9():
             if sorozat > leghosszabbsorozat:
                 leghosszabbsorozat=sorozat
             sorozat=0
-            print(dobas)
             i+= 1
             if i==10:
                 print(str(fbetu), ".db f-et adott meg ")
@@ -183,7 +186,7 @@ def feladat9():
 
 
 '''Irj programot amely beolvas egy pozitív egész számot, és ,megmondja hogy tökéletes szám-e(A tökéletes számok azok, melyek osztóinak összege egyenlő a szám
- kétszeresével. Ilyen szám pl. a 6, mert 2*6 = 1 + 2 + 3 + 6.)'''
+ kétszeresével.'''
 def feladat10():
     szam:int =int(input("Kérem adjon meg egy pozitív egész számot"))
     i:int=1
@@ -223,7 +226,9 @@ def feladat11(a,b):
     if a==b:
         print("legnagyobb közös opsztó:" ,b)
 
-''''''
+
+'''Írj metódust, ami paraméterében kap két számot, és kiírja a legkisebb közös többszörösüket!
+'''
 def feladat12(a,b):
     segedvalt:int=1
     if a < b:
@@ -231,17 +236,25 @@ def feladat12(a,b):
         while not (segedvalt%b==0 and segedvalt%a==0):
 
             segedvalt+=1
-        print("Legkisebb közös többszörös:", segedvalt)
+        print("Legkisebb közös többszörös: ", segedvalt)
     elif b < a:
         segedvalt = a + 1
         while not (segedvalt % a == 0 and segedvalt % b == 0):
 
             segedvalt += 1
-        print("Legkisebb közös többszörös:", segedvalt)
+        print("Legkisebb közös többszörös: ",segedvalt)
     if a==b:
         c:int=a*b
-        print("legkisebb közös többszörös: ",c)
+        print("Legkisebb közös többszörös: ",c)
 
+
+'''Egy hétfői napon az 1-es csoportnak 9 órája van. Az első órában a teljesítményük 90%-át képesek nyújtani. 
+A 2-3. órában már kissé éhesek, és csupán 60%-os a munkabírásuk. A 4-7. órában szerencsére programozást tanulnak, 
+így némiképp javul a hatékonyságuk (70%), a 8-9. órában azonban már újra lecsökken (50%).
+Írj metódust, mely paraméterében kap egy egész számot 1 és 9 között (melyik órán vannak; jelezz hibát, 
+ha nem ebben az intervallumban lévő számot kapsz, pl. “Ez már tényleg túlzás.”). Példa egy esetre: Be: 3, Ki: “Még bírjuk (60%).”   -  
+nem kell tesztfüggvényeket írni, de az alábbi táblázat alapján ellenőrizzétek a munkátokat!
+'''
 def feladat13(szam):
     if  szam < 0:
         print("Hiba")
@@ -258,8 +271,18 @@ def feladat13(szam):
     elif szam ==8 or szam==9:
         print("Lassan nem bírjuk tovább! 50%")
 
+'''5.	Az egyik diák (legyen Márti a neve) az alábbi algoritmus alapján tevékenykedik az órákon:
+a.	hétfőn alszik az összes órán,
+b.	kedden csak hittan órán figyel,
+c.	programozás órán dolgozik, de csak szerdán
+d.	csütörtökön minden órán figyel, mert jó kedve van (aznap szokott moziba menni),
+e.	pénteken a hétvégéről ábrándozik, így csak félig figyel minden aznapi órán,
+f.	a többi óráról semmit nem tudunk.
+Írj metódsut, melynek  2 bemenő prarmétere van (nap neve, óra neve) és tájékoztatást ad Márti állapotáról.
+'''
+
 def feladat14(nap,ora):
-    if nap =="hétfő":
+    if nap == "hétfő":
         print("alszik")
     elif nap=="kedd" and ora!="hittan":
         print("alszik")
