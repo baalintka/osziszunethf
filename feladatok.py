@@ -29,6 +29,7 @@ def feladat2(szam):
 PL. 324 -> „324 számjegyeinek összege: 9”
 '''
 def feladat3(szam):
+    eredeti:int=szam
     ujszam:int=0
     osszeg:int=0
     while 0 < szam:
@@ -37,12 +38,12 @@ def feladat3(szam):
 
         szam//=10
 
-    print("számjegyeinek összege: "+str(osszeg))
+    print(eredeti,"Számjegyeinek összege: "+str(osszeg))
 
 '''irj programot, ami kiírja a 10x10-es alapú szorzótáblát! 10-esével egymás alá!”
 '''
 def feladat4():
-
+    print("   10x10-es alapú szorzótábla:)")
     i:int=1
     v:int=1
     while v != 11:
@@ -208,23 +209,38 @@ def feladat10():
 def feladat11(a,b):
     segedvalt:int=1
     if a<b:
-        segedvalt=a-1
+
+        if a ==1:
+            segedvalt=a
+        else:
+            segedvalt=a-1
+
         while not (a%segedvalt==0 and b%segedvalt==0):
 
             segedvalt-=1
-        print("legnagyobb közös osztó: ", segedvalt)
+        if segedvalt==1:
+            print(a,b," legnagyobb közös osztója: ",a)
+        else:
+            print(a,b," legnagyobb közös osztója: ", segedvalt)
 
 
     elif b<a:
-        segedvalt=b-1
+        if b ==1:
+            segedvalt=b
+        else:
+            segedvalt=b-1
+
         while not (b%segedvalt==0 and a%segedvalt==0):
 
             segedvalt-=1
-        print("legnagyobb közös osztó: ", segedvalt)
+        if segedvalt == 1:
+            print(a, b, " legnagyobb közös osztója: ", b)
+        else:
+            print(a, b, " legnagyobb közös osztója: ", segedvalt)
 
 
     if a==b:
-        print("legnagyobb közös opsztó:" ,b)
+        print(a,b," legnagyobb közös osztója: ", b)
 
 
 '''Írj metódust, ami paraméterében kap két számot, és kiírja a legkisebb közös többszörösüket!
@@ -236,16 +252,16 @@ def feladat12(a,b):
         while not (segedvalt%b==0 and segedvalt%a==0):
 
             segedvalt+=1
-        print("Legkisebb közös többszörös: ", segedvalt)
+        print(a,b,"Legkisebb közös többszöröse: ",segedvalt)
     elif b < a:
         segedvalt = a + 1
         while not (segedvalt % a == 0 and segedvalt % b == 0):
 
             segedvalt += 1
-        print("Legkisebb közös többszörös: ",segedvalt)
+        print(a,b,"Legkisebb közös többszöröse: ",segedvalt)
     if a==b:
         c:int=a*b
-        print("Legkisebb közös többszörös: ",c)
+        print(a,b,"Legkisebb közös többszöröse: ",c)
 
 
 '''Egy hétfői napon az 1-es csoportnak 9 órája van. Az első órában a teljesítményük 90%-át képesek nyújtani. 
