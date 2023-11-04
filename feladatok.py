@@ -175,5 +175,59 @@ def feladat9():
     print(str(fbetu),".db f-et adott meg ")
     print("Leghosszabb  f sorozat: ",str(leghosszabbsorozat))
 
+
+'''Irj programot amely beolvas egy pozitív egész számot, és ,megmondja hogy tökéletes szám-e(A tökéletes számok azok, melyek osztóinak összege egyenlő a szám
+ kétszeresével. Ilyen szám pl. a 6, mert 2*6 = 1 + 2 + 3 + 6.)'''
 def feladat10():
-    pass
+    szam:int =int(input("Kérem adjon meg egy pozitív egész számot"))
+    i:int=1
+    osztoosszeg:int=0
+    while i <= szam:
+        if szam%i==0:
+            osztoosszeg+=i
+            i+=1
+        else:
+            i+=1
+
+    if (szam*2)==osztoosszeg:
+        print("Ez egy tökéletes szám")
+    else:
+        print("Ez nem egy tökéletes szám")
+
+
+''' Írj metódust, ami paraméterében kap két számot, és kiírja a két szám legnagyobb közös osztóját!'''
+def feladat11(a,b):
+    segedvalt:int=1
+    if a<b:
+        segedvalt=a
+        while 0 < a:
+            if a%(a-1)==0 and b%(a-1)==0:
+                a=a-1
+                print("legnagyobb közös osztó: ", a)
+                exit()
+            else:
+                a-=1
+    elif b<a:
+        segedvalt=b
+        while 0 < b:
+            if segedvalt%(b-1)==0 and a%(b-1)==0:
+                b=b-1
+                print("legnagyobb közös osztó: ", b)
+                exit()
+            else:
+                b-=1
+    if a==b:
+        print("legnagyobb közös opsztó:" ,b)
+
+def feladat12(a,b):
+    segedvalt:int=1
+    if a < b:
+        segedvalt=b
+        while 0 < b:
+            if (segedvalt+1)%b==0 and (segedvalt+1)%a==0:
+                print("Legkisebb közös többszörös:", segedvalt)
+                exit()
+        segedvalt+=1
+
+
+
