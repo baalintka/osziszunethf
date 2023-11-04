@@ -269,3 +269,4 @@ def feladat14(nap,ora):
         print("félig van jelen")
     else:
         print("nincs info")
+
