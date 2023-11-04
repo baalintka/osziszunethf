@@ -130,3 +130,30 @@ def feladat8():
     print("Leghosszabb név betűinek száma: ",str(hossz))
     print("Leghosszabb név: ",leghosszabbnev)
 
+
+def feladat9():
+    leghosszabbsorozat:int=0
+    sorozat:int=0
+    fbetu:int=0
+    i:int=0
+
+
+    while i!=10:
+        dobas: str = input("Adja meg az érmedobás eredményét f vagy i: ")
+        while dobas!="f" and dobas!="i":
+            dobas = input("Adja meg az érmedobás eredményét rendesen f vagy i: ")
+        if dobas=="f".lower():
+            fbetu+=1
+            sorozat+=1
+            print(dobas)
+            i+=1
+        if dobas=="i".lower():
+            if sorozat > leghosszabbsorozat:
+                leghosszabbsorozat=sorozat
+            sorozat=0
+            print(dobas)
+            i+= 1
+
+
+    print(str(fbetu),".db f-et adott meg ")
+    print("Leghosszabb  f sorozat: ",str(leghosszabbsorozat))
