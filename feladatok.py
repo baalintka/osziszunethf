@@ -199,35 +199,42 @@ def feladat10():
 def feladat11(a,b):
     segedvalt:int=1
     if a<b:
-        segedvalt=a
-        while 0 < a:
-            if a%(a-1)==0 and b%(a-1)==0:
-                a=a-1
-                print("legnagyobb közös osztó: ", a)
-                exit()
-            else:
-                a-=1
+        segedvalt=a-1
+        while not (a%segedvalt==0 and b%segedvalt==0):
+
+            segedvalt-=1
+        print("legnagyobb közös osztó: ", segedvalt)
+
+
     elif b<a:
-        segedvalt=b
-        while 0 < b:
-            if segedvalt%(b-1)==0 and a%(b-1)==0:
-                b=b-1
-                print("legnagyobb közös osztó: ", b)
-                exit()
-            else:
-                b-=1
+        segedvalt=b-1
+        while not (b%segedvalt==0 and a%segedvalt==0):
+
+            segedvalt-=1
+        print("legnagyobb közös osztó: ", segedvalt)
+
+
     if a==b:
         print("legnagyobb közös opsztó:" ,b)
 
+''''''
 def feladat12(a,b):
     segedvalt:int=1
     if a < b:
-        segedvalt=b
-        while 0 < b:
-            if (segedvalt+1)%b==0 and (segedvalt+1)%a==0:
-                print("Legkisebb közös többszörös:", segedvalt)
-                exit()
-        segedvalt+=1
+        segedvalt=b+1
+        while not (segedvalt%b==0 and segedvalt%a==0):
+
+            segedvalt+=1
+        print("Legkisebb közös többszörös:", segedvalt)
+    elif b < a:
+        segedvalt = a + 1
+        while not (segedvalt % a == 0 and segedvalt % b == 0):
+
+            segedvalt += 1
+        print("Legkisebb közös többszörös:", segedvalt)
+    if a==b:
+        c:int=a*b
+        print("legkisebb közös többszörös: ",c)
 
 
 
