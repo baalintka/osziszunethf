@@ -12,3 +12,4 @@ import feladatok
 #feladatok.feladat11(102,102)
 #feladatok.feladat12(4,2)
 #feladatok.feladat13(9)
+feladatok.feladat14("szerda","programozás")

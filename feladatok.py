@@ -251,3 +251,21 @@ def feladat13(szam):
         print("Progit tanulunk, töltődünk! 70%")
     elif szam ==8 or szam==9:
         print("Lassan nem bírjuk tovább! 50%")
+
+def feladat14(nap,ora):
+    if nap =="hétfő":
+        print("alszik")
+    elif nap=="kedd" and ora!="hittan":
+        print("alszik")
+    elif nap=="kedd" and ora=="hittan":
+        print("figyel")
+    elif nap=="szerda" and ora!="programozás":
+        print("nincs info")
+    elif nap == "szerda" and ora == "programozás":
+        print("dolgozik")
+    elif nap=="csütörtök":
+        print("figyel")
+    elif nap=="péntek":
+        print("félig van jelen")
+    else:
+        print("nincs info")
